@@ -1,0 +1,98 @@
+/*
+Project: Email Validation
+Author: Kamran Javed
+Portfolio: https://kamranjaved.com
+Company: OneDigitalLine
+Website: https://onedigitalline.com
+Email: meet@kamranjaved.com
+License: For personal or client use only. Redistribution prohibited.
+© Kamran Javed. All rights reserved.
+*/
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #61d954, #2ebf75);
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: min(400px, 90%);
+  background-color: #ffffff;
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 25px 25px 30px rgba(0, 0, 0, 0.15);
+  color: #111111;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="email"] {
+  flex: 1;
+  border: 2px solid #d1d3d4;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0 15px;
+  outline: none;
+  letter-spacing: 0.5px;
+  font: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input[type="email"].valid {
+  border-color: #2ecc71;
+}
+
+input[type="email"].invalid {
+  border-color: #ff2851;
+}
+
+#icon {
+  font-size: 25px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#icon.visible {
+  opacity: 1;
+}
+
+#icon.valid {
+  color: #2ecc71;
+}
+
+#icon.invalid {
+  color: #ff2851;
+}
+
+#error-msg {
+  height: 0;
+  color: #ff2851;
+  font-size: 14px;
+  margin-top: 10px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+#error-msg.visible {
+  height: 20px;
+}
